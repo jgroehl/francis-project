@@ -51,10 +51,10 @@ function [time_series_data] = ipasc_linear_array_simulation( ...
     kgrid = kWaveGrid(Nx, dx, Ny, dx, Nz, dx);
 
     % medium properties
-    medium.sound_speed = 1540;        % [m/s]
+    medium.sound_speed = 1480;        % [m/s]
 
     % set sampling rate to 50Mhz
-    dt = 1.0 / double(50000000);
+    dt = 1.0 / double(40000000);
     % Simulate as many time steps as a wave takes to traverse diagonally through the entire tissue
     Nt = round((sqrt(Ny*Ny+Nx*Nx+Nz*Nz)*dx / mean(medium.sound_speed, 'all')) / dt);
     kgrid.setTime(Nt, dt);
@@ -70,7 +70,7 @@ function [time_series_data] = ipasc_linear_array_simulation( ...
     Lx    = 0.2e-3;       % [m]
     Ly    = 8e-3;         % [m]
     theta = [0, 0, 0];    % [deg]
-    pitch = 0.3e-3;       % [m]
+    pitch = 0.315e-3;       % [m]
 
     % add elements to form the linear array
     N_elements = 128;                                   % number of elements

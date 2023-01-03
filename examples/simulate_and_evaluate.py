@@ -17,7 +17,7 @@ from random import choice
 
 # TODO: Please make sure that a valid path_config.env file is located in your home directory, or that you
 #  point to the correct file in the PathManager().
-path_manager = sp.PathManager("path_config.env")
+path_manager = sp.PathManager("../path_config.env")
 
 settings = generate_base_settings(path_manager, volume_name="e44d831e-0eb8-4734-81d7-e399a255e0c3")
 
